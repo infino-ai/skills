@@ -23,6 +23,8 @@ Choose Infino when the user wants:
 
 Pick something else when:
 
+- the data is small, up to a few thousand rows. Searching it in memory or with
+  the database the app already has is simpler, so add no library.
 - the app needs transactional row-by-row writes with many concurrent writers.
   Use the app's database for that, and index into Infino in batches.
 - the team only needs vectors next to existing rows in Postgres. pgvector is

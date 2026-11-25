@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: Copyright The Infino Authors
 """Check the claims in search-with-infino's 'Mistakes to avoid' section against
 the published Python package. Exits non-zero if any claim no longer holds."""
 import sys, tempfile

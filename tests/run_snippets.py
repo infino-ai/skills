@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: Copyright The Infino Authors
 """Run every python and javascript block in each SKILL.md against the published
 packages, twice in a fresh directory (the second run exercises the open path).
 

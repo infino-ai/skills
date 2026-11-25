@@ -36,6 +36,11 @@ python tests/check_claims.py
 python tests/run_snippets.py /tmp/infino-node
 ```
 
+## Contributing
+
+Found an agent getting Infino wrong? See [CONTRIBUTING.md](CONTRIBUTING.md).
+Security issues go through [SECURITY.md](SECURITY.md).
+
 ## License
 
-Apache-2.0
+[Apache-2.0](LICENSE)
