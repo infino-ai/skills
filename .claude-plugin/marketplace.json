@@ -1,0 +1,45 @@
+{
+  "name": "infino-ai",
+  "owner": {
+    "name": "Infino",
+    "url": "https://github.com/infino-ai"
+  },
+  "description": "Claude Code plugins from Infino: search in your own apps and data, and search over your code.",
+  "plugins": [
+    {
+      "name": "infino",
+      "source": {
+        "source": "git-subdir",
+        "url": "infino-ai/infino-mcp",
+        "path": "plugin"
+      },
+      "displayName": "Infino",
+      "description": "Keyword, vector, hybrid and SQL search with Infino. Bundles the Infino MCP server, a skill for using its tools, a skill for adding Infino search to your own Python, Node.js or Rust code, and a /infino-search command.",
+      "author": {
+        "name": "Infino"
+      },
+      "homepage": "https://github.com/infino-ai/infino",
+      "repository": "https://github.com/infino-ai/infino-mcp",
+      "license": "Apache-2.0",
+      "category": "search",
+      "keywords": ["search", "vector", "hybrid", "bm25", "sql", "rag", "agent-memory", "parquet", "object-storage", "mcp"]
+    },
+    {
+      "name": "supergrep",
+      "source": {
+        "source": "github",
+        "repo": "infino-ai/supergrep"
+      },
+      "displayName": "SuperGrep",
+      "description": "Your code and your data through one MCP server: find, search, SQL and read over any directory, and over every table in your Infino account.",
+      "author": {
+        "name": "Infino"
+      },
+      "homepage": "https://github.com/infino-ai/supergrep",
+      "repository": "https://github.com/infino-ai/supergrep",
+      "license": "Apache-2.0",
+      "category": "search",
+      "keywords": ["code-search", "search", "hybrid", "sql", "mcp", "coding-agents"]
+    }
+  ]
+}

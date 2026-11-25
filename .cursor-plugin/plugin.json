@@ -1,0 +1,24 @@
+{
+  "name": "infino",
+  "description": "Add keyword, vector, hybrid and SQL search to your app with Infino, an open-source embedded library that stores data as Parquet on local disk or S3. Includes a skill that teaches the agent when and how to use the library, and the Infino MCP server for searching data as tools.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Infino"
+  },
+  "homepage": "https://github.com/infino-ai/infino",
+  "repository": "https://github.com/infino-ai/skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "search",
+    "full-text-search",
+    "vector-search",
+    "hybrid-search",
+    "bm25",
+    "sql",
+    "rag",
+    "agent-memory",
+    "parquet",
+    "s3",
+    "mcp"
+  ]
+}
