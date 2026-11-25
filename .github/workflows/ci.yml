@@ -1,0 +1,45 @@
+name: CI
+
+# Runs every Python and JavaScript block in each skills/*/SKILL.md against the
+# latest published Infino packages, twice in a fresh directory. The daily run
+# catches a package release that breaks an example nobody edited.
+#
+# Actions are pinned to commit SHAs. The version is in the trailing comment.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  snippets:
+    name: Skill examples (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+      - name: Install the published packages
+        run: |
+          python -m pip install --upgrade infino pyarrow
+          mkdir -p "$RUNNER_TEMP/node" && cd "$RUNNER_TEMP/node"
+          npm init -y > /dev/null
+          npm install @infino-ai/infino
+      - name: Check claims in the mistakes list
+        run: python tests/check_claims.py
+      - name: Run every example in every skill
+        run: python tests/run_snippets.py "$RUNNER_TEMP/node"
