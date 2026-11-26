@@ -7,6 +7,20 @@
   "description": "Claude Code plugins from Infino: search in your own apps and data, and search over your code.",
   "plugins": [
     {
+      "name": "search-with-infino",
+      "source": "./plugins/search-with-infino",
+      "displayName": "Search with Infino",
+      "description": "Just the search-with-infino skill: when and how to add Infino search to your own Python, Node.js or Rust code. No MCP server.",
+      "author": {
+        "name": "Infino"
+      },
+      "homepage": "https://github.com/infino-ai/infino",
+      "repository": "https://github.com/infino-ai/skills",
+      "license": "Apache-2.0",
+      "category": "search",
+      "keywords": ["search", "vector", "hybrid", "bm25", "sql", "rag", "agent-memory", "parquet"]
+    },
+    {
       "name": "infino",
       "source": {
         "source": "git-subdir",
