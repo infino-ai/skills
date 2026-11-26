@@ -9,6 +9,10 @@
   },
   "homepage": "https://github.com/infino-ai/infino",
   "repository": "https://github.com/infino-ai/skills",
+  "documentationUrl": "https://infino.ai/docs",
+  "supportUrl": "https://github.com/infino-ai/skills/issues",
+  "privacyPolicyUrl": "https://infino.ai/privacy",
+  "termsOfServiceUrl": "https://infino.ai/terms",
   "license": "Apache-2.0",
   "icon": ".claude-plugin/icon.png",
   "keywords": [
