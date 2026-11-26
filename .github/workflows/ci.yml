@@ -43,3 +43,11 @@ jobs:
         run: python tests/check_claims.py
       - name: Run every example in every skill
         run: python tests/run_snippets.py "$RUNNER_TEMP/node"
+      # The Claude plugin directory accepts no scripts in a plugin folder, so
+      # plugins/search-with-infino carries its own copy of the skill. It must
+      # stay identical to the one the examples above were run from.
+      - name: Check the plugin's copy of each skill is identical
+        run: |
+          for copy in plugins/*/skills/*/SKILL.md; do
+            cmp "$copy" "skills/$(basename "$(dirname "$copy")")/SKILL.md"
+          done

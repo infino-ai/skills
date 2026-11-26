@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "search-with-infino",
-      "source": "./",
+      "source": "./plugins/search-with-infino",
       "displayName": "Search with Infino",
       "description": "Just the search-with-infino skill: when and how to add Infino search to your own Python, Node.js or Rust code. No MCP server.",
       "author": {
