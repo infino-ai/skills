@@ -1,0 +1,26 @@
+{
+  "name": "search-with-infino",
+  "displayName": "Search with Infino",
+  "description": "Teaches Claude when and how to add search to your app with Infino, an open-source embedded library for BM25 full-text, vector, hybrid and SQL search over Parquet files on local disk or S3. Includes working Python and Node.js examples and the mistakes to avoid.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Infino",
+    "url": "https://github.com/infino-ai"
+  },
+  "homepage": "https://github.com/infino-ai/infino",
+  "repository": "https://github.com/infino-ai/skills",
+  "license": "Apache-2.0",
+  "icon": ".claude-plugin/icon.png",
+  "keywords": [
+    "search",
+    "full-text-search",
+    "vector-search",
+    "hybrid-search",
+    "bm25",
+    "sql",
+    "rag",
+    "agent-memory",
+    "parquet",
+    "s3"
+  ]
+}

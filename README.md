@@ -20,11 +20,13 @@ npx skills add infino-ai/skills
 Or copy a skill folder into your agent's skills directory, for example
 `~/.claude/skills/` for Claude Code.
 
-In Claude Code, this repository is also a plugin marketplace. The `infino`
-plugin bundles this skill with the Infino MCP server:
+In Claude Code, this repository is also a plugin marketplace with two
+plugins. `search-with-infino` is just this skill. `infino` bundles it with the
+Infino MCP server, for agents that should also search data as tools:
 
 ```
 /plugin marketplace add infino-ai/skills
+/plugin install search-with-infino@infino-ai
 /plugin install infino@infino-ai
 ```
 
